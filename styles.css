@@ -91,7 +91,7 @@ h1 {
 }
 
 #version {
-	font: 0.5em;
+	font: 0.75em;
 	font-style: italic;
 	color: DimGray;
 	text-align: center;
@@ -101,4 +101,9 @@ h1 {
 	font: 1em;
 	color: DimGray;
 	text-align: center;
+}
+
+#icon {
+	color: inherit;
+	text-decoration: none;
 }
