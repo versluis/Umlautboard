@@ -36,6 +36,7 @@ a {
 	height: 640px;
 }
 
+
 h1 {
 	text-align: center;
 	color: black;
@@ -87,6 +88,13 @@ h1 {
 #message.hidden {
 	opacity: 0;
 	transition: none;
+}
+
+#version {
+	font: 0.5em;
+	font-style: italic;
+	color: DimGray;
+	text-align: center;
 }
 
 #info {
