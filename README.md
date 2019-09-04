@@ -2,7 +2,7 @@
 
 Easy Access to Umlaut Characters, at any time from anywhere.
 
-![screenshot](Umlaut Board TN.jpg)
+![screenshot](Umlaut-Board-TN.jpg)
 
 Based on Glyphboard by Neven Mrgan: http://mrgan.com/gb/
 
