@@ -1,0 +1,236 @@
+<html>
+<head>
+    <title>Umlautboard</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<link rel="apple-touch-icon-precomposed" href="WP-Guru-App-Icon.png" />
+	
+	<meta name="description" content="Jay's Umlaut and special character collection - accessible from anyswheres">
+	
+	<meta property="og:title" content="Umlautboard" />
+    <meta property="og:url" content="https://wpguru.tv/ub" />
+    <meta property="og:image" content="https://wpguru.co.uk/umlautboard/WP-Guru-App-Icon.png" />
+    <meta property="og:image:width" content="500" />
+    <meta property="og:image:height" content="250" />
+    <meta property="og:description" content="Jay's Umlaut and special character collection - accessible from anyswheres" />
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:creator" content="@versluis">
+    <meta name="twitter:title" content="Umlautboard">
+    <meta name="twitter:description" content="Jay's Umlaut and special character collection - accessible from anyswheres">
+    <meta name="twitter:image" content="https://wpguru.co.uk/umlautboard/WP-Guru-App-Icon.png">
+
+    
+    <style type="text/css">
+    
+    		html
+    		{
+    			background: black;
+		}    	
+    
+		body
+		{
+			background: white;
+			color: white;
+			padding: .5em;
+		    font: 1em Helvetica, sans-serif;	
+    			padding-bottom: env(safe-area-inset-bottom);
+		    
+			-webkit-text-size-adjust: none;			
+			-webkit-tap-highlight-color: transparent;
+			-webkit-user-select: none;	
+		}
+		a
+		{
+			color: inherit;
+			text-decoration: underline;
+		}
+
+		.iPad #glyphboard {
+			width: 80%;
+			left: 10%;
+			top: 5%;
+			max-height: 640px;
+			height: 640px;
+		}
+		
+		h1
+		{
+			text-align: center;
+			color: white;
+			font-size: 3em;
+			letter-spacing: -.05em;
+		    font-weight: 100;
+			
+			-webkit-user-select: none;			
+		}
+					
+		#keyboard 
+		{
+			position: absolute;
+			bottom: 0;
+			padding-bottom: 1em;
+		}
+		
+		#keyboard input /* single key */
+		{ 
+			display: inline-block;
+			width: 1.2em;
+			height: 2em;
+			padding: .6em .1em;
+			margin: .1em 0 .2em 0;
+			overflow: hidden;
+			background: rgba(255,255,255,.15);
+			border: 0px;
+			color: white;
+			-webkit-border-radius: 4px;	
+			
+			font-size: 1.75em;
+			line-height: 18px;
+			text-align: center;			
+			
+			-webkit-user-select: none;
+			cursor: default;			
+		}
+		#keyboard input:active
+		{
+			background: rgba(255,255,255,.25);
+		}
+		
+		#message
+		{
+			margin: 1em auto;
+			font-size: 1.2em;
+			opacity: .5;
+			text-align: center;
+			
+			transition: opacity 2s;
+		}
+		#message.hidden
+		{
+			opacity: 0;
+			transition: none;
+		}
+		
+		    
+    </style>
+    
+	<script type="text/javascript">
+	
+		var st, char;
+
+		function init()
+		{
+			message = document.getElementById('message');
+		}
+
+		function copyChar(el)
+		{
+		    var oldContentEditable = el.contentEditable,
+		        oldReadOnly = el.readOnly,
+		        range = document.createRange();
+		
+		    el.contentEditable = true;
+		    el.readOnly = false;
+		    range.selectNodeContents(el);
+		
+		    var s = window.getSelection();
+		    s.removeAllRanges();
+		    s.addRange(range);
+		
+		    el.setSelectionRange(0, 999999); // A big number, to cover anything that could be inside the element.
+		
+		    el.contentEditable = oldContentEditable;
+		    el.readOnly = oldReadOnly;
+		
+			document.execCommand('copy');
+			window.scrollTo(0, 0);
+			
+			clearTimeout(st);
+			message.innerHTML = 'Copied ' + el.value + ' to pasteboard.';
+			st = setTimeout('clearMessage()', 2500);			
+		}
+		
+		function clearMessage()
+		{
+			message.innerHTML = '';
+		}
+		
+	</script>
+    
+</head>
+<body onload="init()">
+
+	<main>
+		<div id="glyphboard">
+		
+			<h1>
+				Umlautboard
+			</h1>
+		
+			<div id="keyboard">
+				
+				<p id="message"></p>
+				
+				<input onclick="copyChar(this)" value="•" />
+				<input onclick="copyChar(this)" value="●" />
+				<input onclick="copyChar(this)" value="◼︎" />
+				<input onclick="copyChar(this)" value="✚" />	
+				<input onclick="copyChar(this)" value="✖︎" />	
+				<input onclick="copyChar(this)" value="★" />
+				<input onclick="copyChar(this)" value="☆" />
+				<input onclick="copyChar(this)" value="✓" />
+				<input onclick="copyChar(this)" value="♪" />		
+				<input onclick="copyChar(this)" value="♫" />		
+				<input onclick="copyChar(this)" value="⏏︎" />		
+				<input onclick="copyChar(this)" value="▶︎" />		
+				<input onclick="copyChar(this)" value="" />		
+				<input onclick="copyChar(this)" value="⌘" />		
+				<input onclick="copyChar(this)" value="⌥" />		
+				<input onclick="copyChar(this)" value="⇧" />		
+				<input onclick="copyChar(this)" value="⌃" />
+				<input onclick="copyChar(this)" value="↑" />
+				<input onclick="copyChar(this)" value="↓" />
+				<input onclick="copyChar(this)" value="←" />
+				<input onclick="copyChar(this)" value="→" />
+				<input onclick="copyChar(this)" value="№" />
+				<input onclick="copyChar(this)" value="®" />
+				<input onclick="copyChar(this)" value="©" />
+				<input onclick="copyChar(this)" value="™" />
+				<input onclick="copyChar(this)" value="℠" />
+				<input onclick="copyChar(this)" value="℞" />
+				<input onclick="copyChar(this)" value="¶" />
+				<input onclick="copyChar(this)" value="×" />
+				<input onclick="copyChar(this)" value="±" />
+				<input onclick="copyChar(this)" value="≠" />
+				<input onclick="copyChar(this)" value="∞" />
+				<input onclick="copyChar(this)" value="π" />
+				<input onclick="copyChar(this)" value="µ" />
+				<input onclick="copyChar(this)" value="Σ" />
+				<input onclick="copyChar(this)" value="Ω" />
+				<input onclick="copyChar(this)" value="√" />
+				<input onclick="copyChar(this)" value="²" />
+				<input onclick="copyChar(this)" value="¼" />
+				<input onclick="copyChar(this)" value="⅓" />
+				<input onclick="copyChar(this)" value="½" />
+				<input onclick="copyChar(this)" value="¾" />
+				<input onclick="copyChar(this)" value="⇒" />
+				<input onclick="copyChar(this)" value="☞" />			
+				<input onclick="copyChar(this)" value="✆" />				
+				
+				<input onclick="copyChar(this)" value="✄" />
+︎				
+				<input onclick="copyChar(this)" value="♻︎" />
+				<input onclick="copyChar(this)" value="✪" />
+						
+			</div><!-- keyboard -->				
+		</div><!-- glyphboard -->
+					
+	</main>
+
+</body>
+</html>
+
