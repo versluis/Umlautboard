@@ -27,7 +27,8 @@
 		    el.readOnly = oldReadOnly;
 		
 			document.execCommand('copy');
-			window.scrollTo(0, 0);
+			// window.scrollTo(0, 0);
+			window.scrollTo(0,document.body.scrollHeight);
 			
 			clearTimeout(st);
 			message.innerHTML = 'Copied ' + el.value + ' to pasteboard.';
