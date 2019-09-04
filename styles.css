@@ -1,0 +1,92 @@
+@charset "UTF-8";
+/* Umlautboard  */
+/* CSS Document */
+
+html
+    	{
+    			background: white;
+		}    	
+    
+		body
+		{
+			background: white;
+			color: black;
+			padding: .5em;
+		    font: 1em Helvetica, sans-serif;	
+    			padding-bottom: env(safe-area-inset-bottom);
+		    
+			-webkit-text-size-adjust: none;			
+			-webkit-tap-highlight-color: transparent;
+			-webkit-user-select: none;	
+		}
+		a
+		{
+			color: inherit;
+			text-decoration: underline;
+		}
+
+		.iPad #glyphboard {
+			width: 80%;
+			left: 10%;
+			top: 5%;
+			max-height: 640px;
+			height: 640px;
+		}
+		
+		h1
+		{
+			text-align: center;
+			color: white;
+			font-size: 3em;
+			letter-spacing: -.05em;
+		    font-weight: 100;
+			
+			-webkit-user-select: none;			
+		}
+					
+		#keyboard 
+		{
+			position: absolute;
+			bottom: 0;
+			padding-bottom: 1em;
+		}
+		
+		#keyboard input /* single key */
+		{ 
+			display: inline-block;
+			width: 1.2em;
+			height: 2em;
+			padding: .6em .1em;
+			margin: .1em 0 .2em 0;
+			overflow: hidden;
+			background: rgba(255,255,255,.15);
+			border: 0px;
+			color: white;
+			-webkit-border-radius: 4px;	
+			
+			font-size: 1.75em;
+			line-height: 18px;
+			text-align: center;			
+			
+			-webkit-user-select: none;
+			cursor: default;			
+		}
+		#keyboard input:active
+		{
+			background: rgba(255,255,255,.25);
+		}
+		
+		#message
+		{
+			margin: 1em auto;
+			font-size: 1.2em;
+			opacity: .5;
+			text-align: center;
+			
+			transition: opacity 2s;
+		}
+		#message.hidden
+		{
+			opacity: 0;
+			transition: none;
+		}
