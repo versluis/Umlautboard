@@ -4,7 +4,7 @@ Easy Access to Umlaut Characters, at any time from anywhere.
 
 ![screenshot](Umlaut-Board-TN.jpg)
 
-Try it here: https://wpguru.tv/gb
+**Try it here: https://wpguru.tv/gb**
 
 Based on Glyphboard by Neven Mrgan: http://mrgan.com/gb/
 
